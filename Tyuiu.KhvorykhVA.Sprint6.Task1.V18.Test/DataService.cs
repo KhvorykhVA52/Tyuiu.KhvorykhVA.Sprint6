@@ -7,13 +7,25 @@ namespace Tyuiu.KhvorykhVA.Sprint6.Task1.V18.Test
     public class DataServiceTest
     {
         [TestMethod]
-        public void GetMassFunction()
+        public void TestMethod1()
         {
-            DataService ds = new DataService();
-            double[] expectedValues = new double[] { -70.01, -59.9, -45.67, -27.33, -5.91, 20.66, 53.46, 93.55, 142.03, 200.01, 268.65 };
-            double[] actualValues = ds.GetMassFunction(-5, 5);
+            DataService ds = new();
+            int start = -1, stop = 1;
 
-            CollectionAssert.AreEqual(expectedValues, actualValues);
+            int count = 0;
+            for (int i = start; i <= stop; i++) count++;
+
+            double[] mass = new double[count];
+            mass[0] = 15.48;
+            mass[1] = 1;
+            mass[2] = -13.06;
+
+            var res = ds.GetMassFunction(start, stop);
+
+            for (int i = 0; i < count; i++)
+            {
+                Assert.AreEqual(mass[i], res[i]);
+            }
         }
     }
 }
