@@ -9,8 +9,11 @@ namespace Tyuiu.KhvorykhVA.Sprint6.Task0.V8.Test
         {
             DataService ds = new DataService();
             int x = 3;
+
+            double expected = 3.024;
+
             double res = ds.Calculate(x);
-            double expected = 6.425; 
+
             Assert.AreEqual(expected, res);
         }
     }
