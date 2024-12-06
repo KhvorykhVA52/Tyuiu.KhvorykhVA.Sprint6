@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task0", "Task0", "{594199E1-8FAC-4872-8C6E-6CA7D0E9A02E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task0", "Task0", "{D8DF8957-9CC7-407A-9E27-6E3E12F0CD29}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tyuiu.KhvorykhVA.Sprint6.Task0.V8.Lib", "Tyuiu.KhvorykhVA.Sprint6.Task0.V8.Lib\Tyuiu.KhvorykhVA.Sprint6.Task0.V8.Lib.csproj", "{F0073469-E3CA-4041-A2FE-F1ED52DFD11B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tyuiu.KhvorykhVA.Sprint6.Task0.V8.Lib", "Tyuiu.KhvorykhVA.Sprint6.Task0.V8.Lib\Tyuiu.KhvorykhVA.Sprint6.Task0.V8.Lib.csproj", "{D8B87434-FC38-4BDB-836F-C0CF64F3604B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tyuiu.KhvorykhVA.Sprint6.Task0.V8.Test", "Tyuiu.KhvorykhVA.Sprint6.Task0.V8.Test\Tyuiu.KhvorykhVA.Sprint6.Task0.V8.Test.csproj", "{91C08A2F-1794-477A-B6B0-F069A20928BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tyuiu.KhvorykhVA.Sprint6.Task0.V8.Test", "Tyuiu.KhvorykhVA.Sprint6.Task0.V8.Test\Tyuiu.KhvorykhVA.Sprint6.Task0.V8.Test.csproj", "{834C1A7E-7BE6-465B-BE09-EAFC1B8B7899}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.KhvorykhVA.Sprint6.Task0.V8", "Tyuiu.KhvorykhVA.Sprint6.Task0.V8\Tyuiu.KhvorykhVA.Sprint6.Task0.V8.csproj", "{D2D4DB67-4A8B-4D5C-9746-9194DDF98AC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,21 +17,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F0073469-E3CA-4041-A2FE-F1ED52DFD11B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F0073469-E3CA-4041-A2FE-F1ED52DFD11B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F0073469-E3CA-4041-A2FE-F1ED52DFD11B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F0073469-E3CA-4041-A2FE-F1ED52DFD11B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{91C08A2F-1794-477A-B6B0-F069A20928BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{91C08A2F-1794-477A-B6B0-F069A20928BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{91C08A2F-1794-477A-B6B0-F069A20928BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{91C08A2F-1794-477A-B6B0-F069A20928BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8B87434-FC38-4BDB-836F-C0CF64F3604B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8B87434-FC38-4BDB-836F-C0CF64F3604B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8B87434-FC38-4BDB-836F-C0CF64F3604B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8B87434-FC38-4BDB-836F-C0CF64F3604B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{834C1A7E-7BE6-465B-BE09-EAFC1B8B7899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{834C1A7E-7BE6-465B-BE09-EAFC1B8B7899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{834C1A7E-7BE6-465B-BE09-EAFC1B8B7899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{834C1A7E-7BE6-465B-BE09-EAFC1B8B7899}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2D4DB67-4A8B-4D5C-9746-9194DDF98AC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2D4DB67-4A8B-4D5C-9746-9194DDF98AC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2D4DB67-4A8B-4D5C-9746-9194DDF98AC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2D4DB67-4A8B-4D5C-9746-9194DDF98AC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{F0073469-E3CA-4041-A2FE-F1ED52DFD11B} = {594199E1-8FAC-4872-8C6E-6CA7D0E9A02E}
-		{91C08A2F-1794-477A-B6B0-F069A20928BB} = {594199E1-8FAC-4872-8C6E-6CA7D0E9A02E}
+		{D8B87434-FC38-4BDB-836F-C0CF64F3604B} = {D8DF8957-9CC7-407A-9E27-6E3E12F0CD29}
+		{834C1A7E-7BE6-465B-BE09-EAFC1B8B7899} = {D8DF8957-9CC7-407A-9E27-6E3E12F0CD29}
+		{D2D4DB67-4A8B-4D5C-9746-9194DDF98AC6} = {D8DF8957-9CC7-407A-9E27-6E3E12F0CD29}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {81B8341B-DFAE-4823-91B2-74107A83376D}
