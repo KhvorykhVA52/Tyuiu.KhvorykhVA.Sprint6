@@ -12,16 +12,16 @@ namespace Tyuiu.KhvorykhVA.Sprint6.Task4.V4.Lib
             int count = 0;
             for (int x = startValue; x <= stopValue; x++)
             {
-                if (Math.Cos(x) != 0)
+                if (Math.Cos(x) + x != 0)
                 {
-                    y = (2 * x + 6) / Math.Cos(x) + x - 3;
+                    y = (2 * x + 6) / (Math.Cos(x) + x) - 3;
                     y = Math.Round(y, 2);
-                    valueArray[count++] = y;
                 }
                 else
                 {
-                    valueArray[count++] = double.NaN; 
+                    y = 0; // Если cos(x) + x = 0, то функция не определена
                 }
+                valueArray[count++] = y;
             }
             return valueArray;
         }
