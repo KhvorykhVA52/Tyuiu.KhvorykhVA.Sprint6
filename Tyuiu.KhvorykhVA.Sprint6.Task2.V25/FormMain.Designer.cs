@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             groupBoxOne_ZNA = new GroupBox();
+            chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             labelCondition_ZNA = new Label();
             groupBoxTwo_ZNA = new GroupBox();
             buttonPerform_ZNA = new Button();
@@ -41,12 +45,14 @@
             textBoxResult_ZNA = new TextBox();
             labelResult_ZNA = new Label();
             groupBoxOne_ZNA.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
             groupBoxTwo_ZNA.SuspendLayout();
             groupBoxThree_ZNA.SuspendLayout();
             SuspendLayout();
             // 
             // groupBoxOne_ZNA
             // 
+            groupBoxOne_ZNA.Controls.Add(chart1);
             groupBoxOne_ZNA.Controls.Add(labelCondition_ZNA);
             groupBoxOne_ZNA.Location = new Point(12, 12);
             groupBoxOne_ZNA.Name = "groupBoxOne_ZNA";
@@ -54,6 +60,22 @@
             groupBoxOne_ZNA.TabIndex = 0;
             groupBoxOne_ZNA.TabStop = false;
             groupBoxOne_ZNA.Text = "Условие";
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            chart1.Legends.Add(legend1);
+            chart1.Location = new Point(266, 59);
+            chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            chart1.Series.Add(series1);
+            chart1.Size = new Size(263, 300);
+            chart1.TabIndex = 2;
+            chart1.Text = "chart1";
             // 
             // labelCondition_ZNA
             // 
@@ -176,6 +198,7 @@
             Load += FormMain_Load;
             groupBoxOne_ZNA.ResumeLayout(false);
             groupBoxOne_ZNA.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)chart1).EndInit();
             groupBoxTwo_ZNA.ResumeLayout(false);
             groupBoxTwo_ZNA.PerformLayout();
             groupBoxThree_ZNA.ResumeLayout(false);
@@ -197,5 +220,6 @@
         private TextBox textBoxInputEnd_ZNA;
         private TextBox textBoxInputStart_ZNA;
         private TextBox textBoxResult_ZNA;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
