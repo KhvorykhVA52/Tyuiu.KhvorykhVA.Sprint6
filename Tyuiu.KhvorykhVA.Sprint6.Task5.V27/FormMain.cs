@@ -40,19 +40,19 @@ namespace Tyuiu.KhvorykhVA.Sprint6.Task5.V27
 
         private void buttonOpen_VAK_Click(object sender, EventArgs e)
         {
-            Process txt = new Process();
-            txt.StartInfo.FileName = "notepad.exe";
-            txt.StartInfo.Arguments = path;
-            txt.Start();
+            try
+            {
+                Process.Start(new ProcessStartInfo("notepad.exe", path) { UseShellExecute = true });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при открытии файла: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void buttonHelp_VAK_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Таск 5 выполнил студент группы АСОиУБ-24-1 \n Хворых Виктор Александрович", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void chartFunc_VAK_Click(object sender, EventArgs e)
-        {
         }
     }
 }
