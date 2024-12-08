@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics;
+using System.Globalization;
 using System.Windows.Forms;
 using Tyuiu.KhvorykhVA.Sprint6.Task5.V27.Lib;
 
@@ -30,7 +31,7 @@ namespace Tyuiu.KhvorykhVA.Sprint6.Task5.V27
 
             for (int i = 0; i < numsMass.Length; i++)
             {
-                dataGridViewOutPut_VAK.Rows.Add(Convert.ToString(i), Convert.ToString(numsMass[i]));
+                dataGridViewOutPut_VAK.Rows.Add(Convert.ToString(i), numsMass[i].ToString("F2", CultureInfo.InvariantCulture));
                 chartFunc_VAK.Series[0].Points.AddXY(i, numsMass[i]);
             }
         }

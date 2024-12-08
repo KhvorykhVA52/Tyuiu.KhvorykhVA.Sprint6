@@ -22,7 +22,7 @@ namespace Tyuiu.KhvorykhVA.Sprint6.Task5.V27.Lib
                 double[] numsArray = new double[lines.Count];
                 for (int i = 0; i < lines.Count; i++)
                 {
-                    numsArray[i] = Convert.ToDouble(lines[i], CultureInfo.InvariantCulture);
+                    numsArray[i] = Double.Parse(lines[i].Replace(',', '.'), NumberStyles.Any, CultureInfo.InvariantCulture);
                 }
 
                 return numsArray;
