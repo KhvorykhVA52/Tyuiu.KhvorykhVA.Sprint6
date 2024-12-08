@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using tyuiu.cources.programming.interfaces.Sprint6;
@@ -9,15 +10,23 @@ namespace Tyuiu.KhvorykhVA.Sprint6.Task5.V27.Lib
     {
         public double[] LoadFromDataFile(string path)
         {
-            string[] data = File.ReadAllLines(path);
-            double[] values = new double[data.Length];
-
-            for (int i = 0; i < data.Length; i++)
+            using (StreamReader reader = new StreamReader(path))
             {
-                values[i] = Double.Parse(data[i], NumberStyles.Any, CultureInfo.InvariantCulture);
-            }
+                string line;
+                var lines = new List<string>();
+                while ((line = reader.ReadLine()) != null)
+                {
+                    lines.Add(line);
+                }
 
-            return values;
+                double[] numsArray = new double[lines.Count];
+                for (int i = 0; i < lines.Count; i++)
+                {
+                    numsArray[i] = Convert.ToDouble(lines[i], CultureInfo.InvariantCulture);
+                }
+
+                return numsArray;
+            }
         }
     }
 }
