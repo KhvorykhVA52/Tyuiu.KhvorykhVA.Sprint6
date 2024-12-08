@@ -30,11 +30,8 @@ namespace Tyuiu.KhvorykhVA.Sprint6.Task5.V27
 
             for (int i = 0; i < numsMass.Length; i++)
             {
-                if (numsMass[i] > 0)
-                {
-                    dataGridViewOutPut_VAK.Rows.Add(Convert.ToString(i), Convert.ToString(numsMass[i]));
-                    chartFunc_VAK.Series[0].Points.AddXY(i, numsMass[i]);
-                }
+                dataGridViewOutPut_VAK.Rows.Add(Convert.ToString(i), Convert.ToString(numsMass[i]));
+                chartFunc_VAK.Series[0].Points.AddXY(i, numsMass[i]);
             }
         }
 
