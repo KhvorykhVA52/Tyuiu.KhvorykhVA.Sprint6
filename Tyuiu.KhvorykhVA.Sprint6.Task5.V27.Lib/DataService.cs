@@ -8,25 +8,31 @@ namespace Tyuiu.KhvorykhVA.Sprint6.Task5.V27.Lib
 {
     public class DataService : ISprint6Task5V27
     {
+        public int len = 0;
         public double[] LoadFromDataFile(string path)
         {
             using (StreamReader reader = new StreamReader(path))
             {
                 string line;
-                var lines = new List<string>();
                 while ((line = reader.ReadLine()) != null)
                 {
-                    lines.Add(line);
+                    len++;
                 }
-
-                double[] numsArray = new double[lines.Count];
-                for (int i = 0; i < lines.Count; i++)
-                {
-                    numsArray[i] = Double.Parse(lines[i].Replace(',', '.'), NumberStyles.Any, CultureInfo.InvariantCulture);
-                }
-
-                return numsArray;
             }
+            double[] mass = new double[len];
+            int a = 0;
+            using (StreamReader reader = new StreamReader(path))
+            {
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    mass[a] = Convert.ToDouble(line);
+                    a++;
+                }
+
+            }
+            mass = mass.Where(i => i % 5 != 0).ToArray();
+            return mass;
         }
     }
 }
